@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Factory</title>
+
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+//    <link rel="stylesheet" href="todo.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+    <script src="main.js"></script>
+
+</head>
+<body ng-app="myApp">
+<div class="container">
+    <h1>Sharing data between controllers using factories</h1>
+    <hr>
+    <span class="lead text-info">Controller One</span>
+    <div ng-controller="ControllerOne">
+        <input type="text" size="50" ng-model="data.msj">
+        <h3 class="text-info">{{data.msj}}</h3>
+    </div>
+    <hr>
+    <span class="lead text-warning"> Controller Two</span>
+    <div ng-controller="ControllerTwo">
+        <input type="text" size="50" ng-model="data.msj">
+        <h3 class="text-warning">{{data.msj}}</h3>
+    </div>
+</div>
+</body>
+</html>
